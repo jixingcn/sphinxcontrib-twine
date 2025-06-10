@@ -1,6 +1,3 @@
-Sphinx |Twine| Extension
-========================
-
 .. |sphinxcontrib-twine-version| image:: https://img.shields.io/pypi/v/sphinxcontrib-twine.svg
    :target: https://pypi.org/project/sphinxcontrib-twine
 
@@ -13,6 +10,11 @@ Sphinx |Twine| Extension
 .. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/pypa/sphinxcontrib-twine/main.yml?branch=main
    :target: https://github.com/pypa/sphinxcontrib-twine/actions
 
+
+Sphinx |Twine| Extension
+========================
+
+|twine-version| |python-versions| |docs-badge| |build-badge|
 
 Add some interactive stories in your Sphinx docs.
 
