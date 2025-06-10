@@ -1,9 +1,9 @@
-Sphinx |Twine| Extension
-========================
+Sphinx Twine Extension
+======================
 
 |sphinxcontrib-twine-version| |python-versions| |docs-badge| |build-badge|
 
-Add some interactive stories in your Sphinx docs.
+Add some interactive stories (|Twine|) in your Sphinx docs.
 
 
 Features

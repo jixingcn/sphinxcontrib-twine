@@ -1,3 +1,6 @@
+Sphinx Twine Extension
+======================
+
 |sphinxcontrib-twine-version| |python-versions| |docs-badge| |build-badge|
 
 Add some interactive stories (|Twine|) in your Sphinx docs.
@@ -36,6 +39,11 @@ Directive options
 
 Examples
 --------
+
+A Chapbook Sample Story
+^^^^^^^^^^^^^^^^^^^^^^^
+
+From |A Chapbook Sample Story|.
 
 .. twine_chapbook::
     :title: Cloak of Darkness
@@ -174,3 +182,7 @@ Examples
 .. |Chapbook| raw:: html
 
     <a href="https://klembot.github.io/chapbook/" target="_blank">Chapbook</a>
+
+.. |A Chapbook Sample Story| raw:: html
+
+    <a href="https://klembot.github.io/chapbook/examples/cloak-of-darkness.txt" target="_blank">A Chapbook Sample Story</a>
