@@ -50,7 +50,7 @@ Directive options
     :target: https://sphinxcontrib-twine.readthedocs.io
 
 
-.. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/pypa/sphinxcontrib-twine/main.yml?branch=main
+.. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/main.yml?branch=main
     :target: https://github.com/jixingcn/sphinxcontrib-twine/actions
 
 
