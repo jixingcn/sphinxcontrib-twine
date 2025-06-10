@@ -20,23 +20,43 @@ Add some interactive stories in your Sphinx docs.
 Features
 --------
 
-* Supports [Chapbook]
+- Supports |Chapbook|
 
 
-## Installation
+Installation
+------------
+
+::
+
+    $ pip install sphinxcontrib-twine
+
+
+Then add ``sphinxcontrib.twine`` in ``extensions`` list of your project's ``conf.py``::
+
+    extensions = [
+        ...,
+        'sphinxcontrib.twine'
+    ]
+
+
+Configuration
+-------------
+
+
+Usage
+-----
+
+
+Directive options
+^^^^^^^^^^^^^^^^^
 
 
 
-## Configuration
+.. |Twine| raw:: html
+    
+    <a href="https://twinery.org/" target="_blank">Twine</a>
 
 
-## Usage
-
-
-### Directive options
-
-
-
-
-[Twine]: https://twinery.org/
-[Chapbook]: https://klembot.github.io/chapbook/
+.. |Chapbook| raw:: html
+    
+    <a href="https://klembot.github.io/chapbook/" target="_blank">Chapbook</a>
