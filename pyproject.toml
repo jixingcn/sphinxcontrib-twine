@@ -8,7 +8,8 @@ name            = "sphinxcontrib-twine"
 authors         = [{name = "Xing Ji", email = "me@xingji.me"}]
 description     ="Add some interactive stories in your Sphinx docs"
 readme          = "README.md"
-license         = { text = "MIT" }
+license         = "MIT"
+license-files   = ["LICEN[CS]E*"]
 version         = "0.1.0"
 requires-python = ">=3.8"
 keywords        = ["sphinx", "twine", "chapbook", "story"]
@@ -18,7 +19,6 @@ classifiers = [
     "Environment :: Web Environment",
     "Framework :: Sphinx",
     "Framework :: Sphinx :: Extension",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
@@ -38,8 +38,8 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/jixingcn/sphinxcontrib-twine"
 Homepage   = "https://github.com/jixingcn/sphinxcontrib-twine"
-Bug        = "https://github.com/jixingcn/sphinxcontrib-twine/issues"
 Changelog  = "https://github.com/jixingcn/sphinxcontrib-twine/blob/main/CHANGELOG.rst"
+Issues     = "https://github.com/jixingcn/sphinxcontrib-twine/issues"
 
 
 [tool.setuptools.packages.find]
