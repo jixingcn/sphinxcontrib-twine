@@ -170,8 +170,8 @@ From |A Chapbook Sample Story|.
     :target: https://sphinxcontrib-twine.readthedocs.io
 
 
-.. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/pypa/sphinxcontrib-twine/main.yml?branch=main
-    :target: https://github.com/pypa/sphinxcontrib-twine/actions
+.. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/main.yml?branch=main
+    :target: https://github.com/jixingcn/sphinxcontrib-twine/actions
 
 
 .. |Twine| raw:: html
