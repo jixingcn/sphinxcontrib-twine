@@ -10,3 +10,6 @@ __pycache__/
 # package
 dist/
 *.egg-info/
+
+# project
+docs/build*/
