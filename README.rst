@@ -1,16 +1,3 @@
-.. |sphinxcontrib-twine-version| image:: https://img.shields.io/pypi/v/sphinxcontrib-twine.svg
-    :target: https://pypi.org/project/sphinxcontrib-twine
-
-.. |python-versions| image:: https://img.shields.io/pypi/pyversions/sphinxcontrib-twine.svg
-    :target: https://pypi.org/project/sphinxcontrib-twine
-
-.. |docs-badge| image:: https://img.shields.io/readthedocs/sphinxcontrib-twine
-    :target: https://sphinxcontrib-twine.readthedocs.io
-
-.. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/pypa/sphinxcontrib-twine/main.yml?branch=main
-    :target: https://github.com/pypa/sphinxcontrib-twine/actions
-
-
 Sphinx |Twine| Extension
 ========================
 
@@ -33,6 +20,12 @@ Installation
     $ pip install sphinxcontrib-twine
 
 
+Usage
+-----
+
+Configuration
+^^^^^^^^^^^^^
+
 Then add ``sphinxcontrib.twine`` in ``extensions`` list of your project's ``conf.py``::
 
     extensions = [
@@ -40,18 +33,25 @@ Then add ``sphinxcontrib.twine`` in ``extensions`` list of your project's ``conf
         'sphinxcontrib.twine'
     ]
 
-
-Configuration
--------------
-
-
-Usage
------
-
-
 Directive options
 ^^^^^^^^^^^^^^^^^
 
+
+
+.. |sphinxcontrib-twine-version| image:: https://img.shields.io/pypi/v/sphinxcontrib-twine.svg
+    :target: https://pypi.org/project/sphinxcontrib-twine
+
+
+.. |python-versions| image:: https://img.shields.io/pypi/pyversions/sphinxcontrib-twine.svg
+    :target: https://pypi.org/project/sphinxcontrib-twine
+
+
+.. |docs-badge| image:: https://img.shields.io/readthedocs/sphinxcontrib-twine
+    :target: https://sphinxcontrib-twine.readthedocs.io
+
+
+.. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/pypa/sphinxcontrib-twine/main.yml?branch=main
+    :target: https://github.com/pypa/sphinxcontrib-twine/actions
 
 
 .. |Twine| raw:: html
