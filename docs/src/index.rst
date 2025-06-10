@@ -1,7 +1,8 @@
 Sphinx Twine Extension
 ======================
 
-|sphinxcontrib-twine-version| |python-versions| |docs-badge| |build-badge|
+|sphinxcontrib-twine-version| |python-versions| |docs-badge| |pylint-badge|
+
 
 Add some interactive stories (|Twine|) in your Sphinx docs.
 
@@ -170,7 +171,7 @@ From |A Chapbook Sample Story|.
     :target: https://sphinxcontrib-twine.readthedocs.io
 
 
-.. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/main.yml?branch=main
+.. |pylint-badge| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/pylint.yml?branch=main
     :target: https://github.com/jixingcn/sphinxcontrib-twine/actions
 
 
