@@ -7,7 +7,6 @@ build-backend = "setuptools.build_meta"
 name            = "sphinxcontrib-twine"
 authors         = [{name = "Xing Ji", email = "me@xingji.me"}]
 description     ="Add some interactive stories in your Sphinx docs"
-readme          = "README.md"
 license         = "MIT"
 license-files   = ["LICEN[CS]E*"]
 version         = "0.1.0"
@@ -33,6 +32,10 @@ classifiers = [
 dependencies = [
     "sphinx",
 ]
+
+[project.readme]
+file = "README.rst"
+content-type = "text/x-rst"
 
 
 [project.urls]
