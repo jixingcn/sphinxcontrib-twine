@@ -5,8 +5,8 @@ import sphinx
 import docutils
 import sphinx.application
 
-__title__ = 'sphinx_twine_chapbook'
-__description__ = 'sphinx_twine_chapbook'
+__title__ = 'sphinxcontrib-twine'
+__description__ = 'sphinxcontrib-twine'
 __version__ = '0.1.0'
 
 
