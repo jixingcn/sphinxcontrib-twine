@@ -51,7 +51,7 @@ Directive options
     :target: https://sphinxcontrib-twine.readthedocs.io
 
 
-.. |pylint-badge| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/pylint.yml?branch=main
+.. |pylint-badge| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/pylint.yml?branch=main&label=pylint
     :target: https://github.com/jixingcn/sphinxcontrib-twine/actions
 
 
