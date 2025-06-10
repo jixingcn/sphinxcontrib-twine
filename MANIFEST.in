@@ -1,0 +1,7 @@
+include README.md
+include CHANGELOG.md
+include LICENSE
+
+prune tests
+exclude .gitignore
+global-exclude *.pyc
