@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import docutils.nodes
 import sphinx
 import docutils
-import sphinx.application
 
 __title__ = 'sphinxcontrib-twine'
 __description__ = 'sphinxcontrib-twine'
