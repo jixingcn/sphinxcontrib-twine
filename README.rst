@@ -51,7 +51,7 @@ Directive options
 
 
 .. |build-badge| image:: https://img.shields.io/github/actions/workflow/status/pypa/sphinxcontrib-twine/main.yml?branch=main
-    :target: https://github.com/pypa/sphinxcontrib-twine/actions
+    :target: https://github.com/jixingcn/sphinxcontrib-twine/actions
 
 
 .. |Twine| raw:: html
