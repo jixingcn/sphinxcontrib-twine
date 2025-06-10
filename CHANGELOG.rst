@@ -11,4 +11,4 @@ Changelog
 
 .. |Chapbook| raw:: html
 
-    https://klembot.github.io/chapbook/
+    <a href="https://klembot.github.io/chapbook/" target="_blank">Chapbook</a>
