@@ -1,16 +1,16 @@
-Sphinx Twine Extension
-======================
+sphinxcontrib-twine
+===================
 
 |sphinxcontrib-twine-version| |python-versions| |docs-badge| |pylint-badge|
 
 
-Add some interactive stories (|Twine|) in your Sphinx docs.
+Add some interactive stories (`Twine`_) in your Sphinx docs.
 
 
 Features
 --------
 
-- Supports |Chapbook|
+- Supports `Chapbook`_
 
 
 Installation
@@ -55,11 +55,7 @@ Directive options
     :target: https://github.com/jixingcn/sphinxcontrib-twine/actions
 
 
-.. |Twine| raw:: html
-
-    <a href="https://twinery.org/" target="_blank">Twine</a>
+.. _Twine: https://twinery.org/
 
 
-.. |Chapbook| raw:: html
-
-    <a href="https://klembot.github.io/chapbook/" target="_blank">Chapbook</a>
+.. _Chapbook: https://klembot.github.io/chapbook/

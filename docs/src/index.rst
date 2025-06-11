@@ -34,17 +34,25 @@ Then add ``sphinxcontrib.twine`` in ``extensions`` list of your project's ``conf
         'sphinxcontrib.twine'
     ]
 
-Directive options
-^^^^^^^^^^^^^^^^^
+
+Directive and Options
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    .. twine-chapbook::
+       :title: Deep Mind
+       :width: 100%
+       :height: 600
 
 
 Examples
 --------
 
-A Chapbook Sample Story
-^^^^^^^^^^^^^^^^^^^^^^^
+Cloak of Darkness
+^^^^^^^^^^^^^^^^^
 
-From |A Chapbook Sample Story|.
+Copy from |A Chapbook Sample Story|.
 
 .. twine-chapbook::
     :title: Cloak of Darkness
