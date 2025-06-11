@@ -1,5 +1,5 @@
 sphinxcontrib-twine
-===================
+###################
 
 |sphinxcontrib-twine-version| |python-versions| |docs-badge| |pylint-badge|
 
@@ -8,34 +8,36 @@ Add some interactive stories (`Twine`_) in your Sphinx docs.
 
 
 Features
---------
+********
 
 - Supports `Chapbook`_
 
 
-Installation
-------------
+TL;DR
+*****
 
 ::
 
     $ pip install sphinxcontrib-twine
 
-
-Usage
------
-
-Configuration
-^^^^^^^^^^^^^
-
-Then add ``sphinxcontrib.twine`` in ``extensions`` list of your project's ``conf.py``::
+::
 
     extensions = [
         ...,
         'sphinxcontrib.twine'
     ]
 
-Directive options
-^^^^^^^^^^^^^^^^^
+::
+
+    .. twine-chapbook::                                :title: Deep Mind
+       :width: 100%
+       :height: 600
+
+
+License
+*******
+
+Under `MIT License <https://github.com/jixingcn/sphinxcontrib-twine/blob/main/LICENSE>`_.
 
 
 
@@ -59,3 +61,4 @@ Directive options
 
 
 .. _Chapbook: https://klembot.github.io/chapbook/
+

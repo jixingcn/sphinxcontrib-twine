@@ -1,2 +1,4 @@
 Sphinx
 pylint
+build
+twine

@@ -25,7 +25,6 @@ if errorlevel 9009 (
 )
 
 if "%1" == "" goto help
-if "%1" == "gettext" goto gettext
 goto other
 
 :help
