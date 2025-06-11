@@ -1,16 +1,11 @@
-[build-system]
-requires      = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
-
 [project]
+dynamic         = ["version"]
 name            = "sphinxcontrib-twine"
-version         = "0.2.0"
 description     ="Add some interactive stories in your Sphinx docs"
 readme          = "README.rst"
 license         = "MIT"
 license-files   = ["LICENSE"]
-requires-python = ">=3.9"
+requires-python = ">=3.7"
 keywords        = ["sphinx", "twine", "chapbook", "story"]
 
 authors         = [{name = "Xing Ji", email = "me@xingji.me"}]
@@ -38,3 +33,11 @@ dependencies = [
 "Changelog"  = "https://github.com/jixingcn/sphinxcontrib-twine/blob/main/CHANGELOG.rst"
 "Issues"     = "https://github.com/jixingcn/sphinxcontrib-twine/issues"
 
+
+[build-system]
+requires      = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.dynamic]
+version = {attr = "sphinxcontrib.twine.__version__"}
