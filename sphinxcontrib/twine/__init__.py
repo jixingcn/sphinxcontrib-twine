@@ -8,7 +8,7 @@ import docutils
 
 __title__       = 'sphinxcontrib-twine'
 __description__ = 'sphinxcontrib-twine'
-__version__     = '0.1.0'
+__version__     = '0.2.0'
 
 
 class TwineChapbookNode(docutils.nodes.General, docutils.nodes.Inline, docutils.nodes.Element):
@@ -248,7 +248,7 @@ def setup(app: sphinx.application.Sphinx):
         TwineChapbookNode,
         html = (html_visit_twine_chapbook, None),
     )
-    app.add_directive('twine_chapbook', TwineChapbook)
+    app.add_directive('twine-chapbook', TwineChapbook)
 
     app.connect('html-page-context', on_html_page_context)
 

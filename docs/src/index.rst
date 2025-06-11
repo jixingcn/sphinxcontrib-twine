@@ -46,7 +46,7 @@ A Chapbook Sample Story
 
 From |A Chapbook Sample Story|.
 
-.. twine_chapbook::
+.. twine-chapbook::
     :title: Cloak of Darkness
     :width: 100%
     :height: 500
