@@ -8,8 +8,7 @@ __pycache__/
 .vscode/
 
 # package
-dist/
+dist*/
 *.egg-info/
-
-# project
+build*/
 docs/build*/

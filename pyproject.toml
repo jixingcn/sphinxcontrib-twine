@@ -6,10 +6,7 @@ readme          = "README.rst"
 license         = "MIT"
 license-files   = ["LICENSE"]
 requires-python = ">=3.7"
-keywords        = ["sphinx", "twine", "chapbook", "story"]
-
-authors         = [{name = "Xing Ji", email = "me@xingji.me"}]
-maintainers     = [{name = "Xing Ji", email = "me@xingji.me"}]
+keywords        = ["sphinx", "twinery", "twine2", "twee3", "chapbook", "story"]
 
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
@@ -24,7 +21,13 @@ classifiers = [
 
 dependencies = [
     "sphinx",
+    "pytwee",
 ]
+
+
+[[project.authors]]
+name  = "Xing Ji"
+email = "me@xingji.me"
 
 
 [project.urls]

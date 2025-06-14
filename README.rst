@@ -1,7 +1,11 @@
 sphinxcontrib-twine
 ###################
 
-|sphinxcontrib-twine-version| |python-versions| |docs-badge| |pylint-badge|
+|pylint-action| |pypi-action| |test-action|
+
+|docs-badge|
+
+|pypi-version| |pypi-python|  |pypi-status|
 
 
 Add some interactive stories (`Twine`_) in your Sphinx docs.
@@ -10,11 +14,14 @@ Add some interactive stories (`Twine`_) in your Sphinx docs.
 Features
 ********
 
-- Supports `Chapbook`_
+- Support `Chapbook`_
+- [TODO] Support `Harlowe`_
+- [TODO] Support `Snowman`_
+- [TODO] Support `SugarCube`_
 
 
-TL;DR
-*****
+Use
+***
 
 ::
 
@@ -29,7 +36,8 @@ TL;DR
 
 ::
 
-    .. twine-chapbook::                                :title: Deep Mind
+    .. twine-chapbook::
+       :title: Deep Mind
        :width: 100%
        :height: 600
 
@@ -37,28 +45,60 @@ TL;DR
 License
 *******
 
-Under `MIT License <https://github.com/jixingcn/sphinxcontrib-twine/blob/main/LICENSE>`_.
+|license|
 
 
 
-.. |sphinxcontrib-twine-version| image:: https://img.shields.io/pypi/v/sphinxcontrib-twine.svg
-    :target: https://pypi.org/project/sphinxcontrib-twine
+.. |pylint-action| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/pylint.yml?label=pylint
+    :alt: pylint workflow Status
+    :target: https://github.com/jixingcn/sphinxcontrib-twine/actions/workflows/pylint.yml
 
 
-.. |python-versions| image:: https://img.shields.io/pypi/pyversions/sphinxcontrib-twine.svg
-    :target: https://pypi.org/project/sphinxcontrib-twine
+.. |pypi-action| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/pypi.yml?label=pypi
+    :alt: pypi workflow Status
+    :target: https://github.com/jixingcn/sphinxcontrib-twine/actions/workflows/pypi.yml
+
+.. |test-action| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/test.yml?label=test
+    :alt: test workflow Status
+    :target: https://github.com/jixingcn/sphinxcontrib-twine/actions/workflows/test.yml
 
 
-.. |docs-badge| image:: https://img.shields.io/readthedocs/sphinxcontrib-twine
+.. |docs-badge| image:: https://img.shields.io/readthedocs/sphinxcontrib-twine/latest
+    :alt: Read the Docs (version)
     :target: https://sphinxcontrib-twine.readthedocs.io
 
 
-.. |pylint-badge| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/pylint.yml?branch=main&label=pylint
-    :target: https://github.com/jixingcn/sphinxcontrib-twine/actions
+.. |pypi-version| image:: https://img.shields.io/pypi/v/sphinxcontrib-twine
+    :alt: PyPI - Version
+    :target: https://pypi.org/project/sphinxcontrib-twine
+
+
+.. |pypi-python| image:: https://img.shields.io/pypi/pyversions/sphinxcontrib-twine
+    :alt: PyPI - Python Version
+    :target: https://pypi.org/project/sphinxcontrib-twine
+
+
+.. |pypi-status| image:: https://img.shields.io/pypi/status/sphinxcontrib-twine
+    :alt: PyPI - Status
+    :target: https://pypi.org/project/sphinxcontrib-twine
+
+
+.. |license| image:: https://img.shields.io/badge/license-MIT-green
+    :alt: Static Badge
+    :target: https://github.com/jixingcn/sphinxcontrib-twine/blob/main/LICENSE
 
 
 .. _Twine: https://twinery.org/
 
 
 .. _Chapbook: https://klembot.github.io/chapbook/
+
+
+.. _Harlowe: https://twine2.neocities.org/
+
+
+.. _Snowman: https://videlais.github.io/snowman/
+
+
+.. _SugarCube: https://www.motoslave.net/sugarcube/2/
 

@@ -6,9 +6,12 @@ Add some twine stories in Sphinx docs.
 import sphinx
 import docutils
 
-__title__       = 'sphinxcontrib-twine'
-__description__ = 'sphinxcontrib-twine'
-__version__     = '0.2.0'
+import pytwee
+
+
+__title__   = 'sphinxcontrib-twine'
+__version__ = '0.3.0'
+__authors__ = [{'name': 'Xing Ji', 'email': 'me@xingji.me'}]
 
 
 class TwineChapbookNode(docutils.nodes.General, docutils.nodes.Inline, docutils.nodes.Element):
@@ -44,132 +47,6 @@ def html_visit_twine_chapbook(self, node):
     raise docutils.nodes.SkipNode
 
 
-class StoryData: # pylint: disable=too-few-public-methods
-    '''
-    The data about the twine story.
-
-    * Parse the twine file format
-    * Convert to HTML
-    '''
-
-    def __init__(self, name: str = None, startnode: int = None):
-        self.name      = name
-        self.startnode = startnode
-        self.passages  = []
-
-    def html(self):
-        '''
-        Generate the HTML format by the context of the data.
-        '''
-
-        title = self.name
-        if title is None:
-            title = ''
-
-        # find a valid `startnode`
-        startnode = None
-        for i, passage in enumerate(self.passages):
-            # default is first passage
-            if startnode is None:
-                startnode = i
-            if passage.name == self.startnode:
-                startnode = i
-                break
-        if startnode is None:
-            raise ValueError(f'can\'t find startnode - {self.startnode}')
-
-        html_code = f'<tw-storydata name="{title}" startnode="{startnode}">'
-
-        for i, passage in enumerate(self.passages):
-            passage    = self.passages[i]
-            html_code += passage.html(i)
-
-        html_code += '</tw-storydata>'
-        return html_code
-
-
-class StorySegment: # pylint: disable=too-few-public-methods
-    '''
-    Basic class of the story segment.
-    '''
-
-    def __init__(self, data):
-        self.data = data
-
-    def __call__(self, line):
-        pass
-
-
-class StorySegmentStoryTitle(StorySegment): # pylint: disable=too-few-public-methods
-    '''
-    Use the `StoryTitle` segment to set the title.
-    '''
-
-    id = 'StoryTitle'
-
-    def __call__(self, line):
-        line = line.strip()
-        if line == '':
-            return
-
-        self.data.name = line
-
-
-class StorySegmentStoryData(StorySegment): # pylint: disable=too-few-public-methods
-    '''
-    Use the `StoryData` segment to set the startnode(index) and title.
-    '''
-
-    id = 'StoryData'
-
-    def __call__(self, line):
-        line = line.strip()
-        if line == '':
-            return
-
-        line_segs = line.split(':')
-        if len(line_segs) != 2:
-            return
-
-        line_key, line_value = line.split(':')
-        line_key             = line_key.strip().lower()
-        line_value           = line_value.strip()
-
-        if line_key == 'index':
-            self.data.startnode = line_value
-        elif line_key == 'title' and line_value != '':
-            self.data.name = line_value
-
-
-class StorySegmentPassage(StorySegment):
-    '''
-    Process the passage segment
-    '''
-
-    def __init__(self, data, name):
-        super().__init__(data)
-
-        self.name  = name
-        self.lines = []
-
-        data.passages.append(self)
-
-    def __call__(self, line):
-        self.lines.append(line)
-
-    def html(self, pid):
-        '''
-        Genearte this passage to HTML
-        '''
-
-        html_lines = []
-        html_lines.append(f'<tw-passagedata name="{self.name}" pid="{pid}">')
-        html_lines.append('\n'.join(self.lines))
-        html_lines.append('</tw-passagedata>')
-
-        return '\n'.join(html_lines)
-
-
 class TwineChapbook(sphinx.util.docutils.SphinxDirective):
     '''
     The Sphinx directive for the twine chapbook
@@ -186,26 +63,24 @@ class TwineChapbook(sphinx.util.docutils.SphinxDirective):
     def run(self, *args, **kwargs): # pylint: disable=unused-argument
         node = TwineChapbookNode(**self.options)
 
-        story_data    = StoryData()
-        story_segment = None
+        story  = pytwee.Story()
+
+        parser = pytwee.twee3.Parser(story)
         for line in self.content:
-            if line.startswith('::'):
-                story_tag = line[2:].strip()
-                if line[2:].strip() == StorySegmentStoryTitle.id:
-                    story_segment = StorySegmentStoryTitle(story_data)
-                elif line[2:].strip() == StorySegmentStoryData.id:
-                    story_segment = StorySegmentStoryData(story_data)
-                else:
-                    story_segment = StorySegmentPassage(story_data, story_tag)
-            elif story_segment is not None:
-                story_segment(line)
+            parser(line)
+        del parser
 
         if 'title' in self.options:
             title = self.options['title'].strip()
             if title != '':
-                story_data.name = title
+                story.title = title
 
-        node['compiled'] = story_data.html()
+        twine2html = []
+        unparser   = pytwee.twee2.UnparserHTML(story)
+        for line in iter(unparser, None):
+            twine2html.append(line)
+
+        node['compiled'] = '\n'.join(twine2html)
         self.add_name(node)
         return [node]
 

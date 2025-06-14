@@ -1,7 +1,6 @@
 '''
 Sphinx docs configuration
 '''
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # Configuration file for the Sphinx documentation builder.
@@ -12,13 +11,25 @@ Sphinx docs configuration
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+# pylint: disable=invalid-name
+
 import datetime
+import sys
+import os
 
 
-project   = 'sphinxcontrib-twine' # pylint: disable=invalid-name
-copyright = f'{datetime.datetime.now().year}, Xing Ji (me@xingji.me).' # pylint: disable=redefined-builtin, invalid-name
-author    = 'Xing Ji (me@xingji.me)' # pylint: disable=invalid-name
-version   = '0.1.0' # pylint: disable=invalid-name
+docs_path    = os.path.dirname(os.path.dirname(__file__))
+project_path = os.path.dirname(docs_path)
+
+# use the project
+sys.path.insert(0, project_path)
+
+from sphinxcontrib import twine # pylint: disable=wrong-import-position, no-name-in-module
+
+project   = twine.__title__
+version   = twine.__version__
+authors   = ','.join([f'{author["name"]} ({author["email"]})' for author in twine.__authors__])
+copyright = f'{datetime.datetime.now().year}, {authors}.' # pylint: disable=redefined-builtin
 
 
 # -- General configuration ---------------------------------------------------
