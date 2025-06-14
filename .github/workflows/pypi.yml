@@ -42,14 +42,14 @@ jobs:
 
   publish-to-pypi:
     name: Publish Python 🐍 distribution 📦 to PyPI
-    if: github.repository == 'jixingcn/pytwee' && github.ref_type == 'tag' && !endsWith(github.ref, '.test')
+    if: github.repository == 'jixingcn/sphinxcontrib-twine' && github.ref_type == 'tag' && !endsWith(github.ref, '.test')
     needs:
     - build
     runs-on: ubuntu-latest
 
     environment:
       name: pypi
-      url: https://pypi.org/p/pytwee
+      url: https://pypi.org/p/sphinxcontrib-twine
 
     permissions:
       id-token: write
@@ -65,14 +65,14 @@ jobs:
 
   publish-to-testpypi:
     name: Publish Python 🐍 distribution 📦 to TestPyPI
-    if: github.repository == 'jixingcn/pytwee' && github.ref_type == 'tag' && endsWith(github.ref, '.test')
+    if: github.repository == 'jixingcn/sphinxcontrib-twine' && github.ref_type == 'tag' && endsWith(github.ref, '.test')
     needs:
     - build
     runs-on: ubuntu-latest
 
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/pytwee
+      url: https://test.pypi.org/p/sphinxcontrib-twine
 
     permissions:
       id-token: write
@@ -90,7 +90,7 @@ jobs:
 
   release-to-github:
     name: Release to github
-    if: github.repository == 'jixingcn/pytwee' && github.ref_type == 'tag' && !endsWith(github.ref, '.test')
+    if: github.repository == 'jixingcn/sphinxcontrib-twine' && github.ref_type == 'tag' && !endsWith(github.ref, '.test')
     needs:
     - build
     runs-on: ubuntu-latest
