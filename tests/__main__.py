@@ -13,6 +13,13 @@ class TestMethods(unittest.TestCase):
     Test
     '''
 
+    def test_foo(self):
+        '''
+        A temp test
+        '''
+
+        self.assertEqual('FOO'.lower(), 'foo')
+
 
 if __name__ == '__main__':
     unittest.main()

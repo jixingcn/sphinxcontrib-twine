@@ -3,6 +3,8 @@ Add some twine stories in Sphinx docs.
 '''
 # -*- coding: utf-8 -*-
 
+# pylint: disable=too-few-public-methods
+
 import sphinx
 import docutils
 
@@ -61,6 +63,9 @@ class TwineChapbook(sphinx.util.docutils.SphinxDirective):
     }
 
     def run(self, *args, **kwargs): # pylint: disable=unused-argument
+        '''
+        Process the twine-chapbook directive
+        '''
         node = TwineChapbookNode(**self.options)
 
         story  = pytwee.Story()
