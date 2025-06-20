@@ -1,6 +1,8 @@
 include README.rst
 include CHANGELOG.rst
 include LICENSE
+include sphinxcontrib/twine/storyformats.json
+include sphinxcontrib/twine/twine2story.html
 
 prune tests
 exclude .gitignore
