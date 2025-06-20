@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            html, body, iframe {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                overflow: hidden;
+            }
+        </style>
+        <script>
+            window.storyFormat = function (data) {
+                const twine_story = document.querySelector("tw-storydata");
+                if (twine_story) {
+                    var twine_source = data.source;
+                    twine_source = twine_source.replace("\{\{STORY_NAME\}\}", twine_story.getAttribute("name"));
+                    twine_source = twine_source.replace("\{\{STORY_DATA\}\}", twine_story.outerHTML);
+                    var twine_iframe = document.querySelector("iframe");
+                    twine_iframe.srcdoc = twine_source;
+                }
+            };
+        </script>
+        {{ twine2script }}
+    </head>
+    <body>
+        <iframe></iframe>
+        {{ twine2storydata }}
+    </div>
+    </body>
+</html>

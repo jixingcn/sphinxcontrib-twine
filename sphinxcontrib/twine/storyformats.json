@@ -1,0 +1,42 @@
+{
+    "chapbook": {
+        "1.2.3": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/chapbook-1.2.3/format.js"
+        },
+        "2.3.0": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/chapbook-2.3.0/format.js"
+        }
+    },
+    "harlowe": {
+        "1.2.4": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/harlowe-1.2.4/format.js"
+        },
+        "2.1.0": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/harlowe-2.1.0/format.js"
+        },
+        "3.3.9": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/harlowe-3.3.9/format.js"
+        }
+    },
+    "snowman": {
+        "1.4.0": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/snowman-1.4.0/format.js"
+        },
+        "2.0.2": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/snowman-2.0.2/format.js"
+        }
+    },
+    "sugarcube": {
+        "1.0.35": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/sugarcube-1.0.35/format.js"
+        },
+        "2.37.3": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/sugarcube-2.37.3/format.js"
+        }
+    },
+    "paperthin": {
+        "1.0.0": {
+            "format.js": "https://cdn.jsdelivr.net/gh/klembot/twinejs@main/public/story-formats/paperthin-1.0.0/format.js"
+        }
+    }
+}

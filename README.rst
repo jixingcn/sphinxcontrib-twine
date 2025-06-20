@@ -1,11 +1,11 @@
 sphinxcontrib-twine
 ###################
 
-|pylint-action| |pypi-action| |test-action|
-
-|docs-badge|
+|pylint-action| |test-action| |pypi-action|
 
 |pypi-version| |pypi-python|  |pypi-status|
+
+|docs-badge|
 
 
 Add some interactive stories (`Twine`_) in your Sphinx docs.
@@ -14,10 +14,9 @@ Add some interactive stories (`Twine`_) in your Sphinx docs.
 Features
 ********
 
-- Support `Chapbook`_
-- [TODO] Support `Harlowe`_
-- [TODO] Support `Snowman`_
-- [TODO] Support `SugarCube`_
+- Story formats: `Chapbook`_, `Harlowe`_, `Snowman`_, `SugarCube`_
+- Contains multiple `Twine`_ stories in one page
+- All *format.js* files are imported from `twinejs`_ and `cdn.jsdelivr.net <https://github.com/jixingcn/sphinxcontrib-twine/tree/main/sphinxcontrib/twine/storyformats.json>`_
 
 
 Use
@@ -36,10 +35,17 @@ Use
 
 ::
 
-    .. twine-chapbook::
-       :title: Deep Mind
-       :width: 100%
-       :height: 600
+    .. twine::
+        :format: Chapbook
+        :title: Test
+        :width: 100%
+        :height: 500
+    
+        :: StoryTitle
+        Test in Chapbook
+    
+        :: Start
+        Start
 
 
 License
@@ -54,18 +60,14 @@ License
     :target: https://github.com/jixingcn/sphinxcontrib-twine/actions/workflows/pylint.yml
 
 
-.. |pypi-action| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/pypi.yml?label=pypi
-    :alt: pypi workflow Status
-    :target: https://github.com/jixingcn/sphinxcontrib-twine/actions/workflows/pypi.yml
-
 .. |test-action| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/test.yml?label=test
     :alt: test workflow Status
     :target: https://github.com/jixingcn/sphinxcontrib-twine/actions/workflows/test.yml
 
 
-.. |docs-badge| image:: https://img.shields.io/readthedocs/sphinxcontrib-twine/latest
-    :alt: Read the Docs (version)
-    :target: https://sphinxcontrib-twine.readthedocs.io
+.. |pypi-action| image:: https://img.shields.io/github/actions/workflow/status/jixingcn/sphinxcontrib-twine/pypi.yml?label=pypi
+    :alt: pypi workflow Status
+    :target: https://github.com/jixingcn/sphinxcontrib-twine/actions/workflows/pypi.yml
 
 
 .. |pypi-version| image:: https://img.shields.io/pypi/v/sphinxcontrib-twine
@@ -81,6 +83,11 @@ License
 .. |pypi-status| image:: https://img.shields.io/pypi/status/sphinxcontrib-twine
     :alt: PyPI - Status
     :target: https://pypi.org/project/sphinxcontrib-twine
+
+
+.. |docs-badge| image:: https://img.shields.io/readthedocs/sphinxcontrib-twine/latest
+    :alt: Read the Docs (version)
+    :target: https://sphinxcontrib-twine.readthedocs.io
 
 
 .. |license| image:: https://img.shields.io/badge/license-MIT-green
@@ -102,3 +109,5 @@ License
 
 .. _SugarCube: https://www.motoslave.net/sugarcube/2/
 
+
+.. _twinejs: https://github.com/klembot/twinejs

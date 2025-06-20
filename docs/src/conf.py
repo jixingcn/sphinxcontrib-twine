@@ -38,7 +38,7 @@ copyright = f'{datetime.datetime.now().year}, {authors}.' # pylint: disable=rede
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
-    'sphinx.ext.autosectionlabel',
+    #'sphinx.ext.autosectionlabel',
     'sphinx.ext.mathjax',
     'sphinx.ext.graphviz',
     'sphinx_rtd_theme',
