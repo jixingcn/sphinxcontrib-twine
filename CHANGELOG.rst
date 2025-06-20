@@ -1,6 +1,12 @@
 Changelog
 #########
 
+0.3.2
+*****
+
+- Supports `Chapbook`_, `Harlowe`_, `Snowman`_, `SugarCube`_
+- Rename the directive to **twine**
+
 
 0.2.0
 *****
