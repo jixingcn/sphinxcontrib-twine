@@ -12,7 +12,7 @@ from . import twine
 
 
 __title__   = 'sphinxcontrib-twine'
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 __authors__ = [{'name': 'Xing Ji', 'email': 'me@xingji.me'}]
 
 
